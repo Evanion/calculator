@@ -4,5 +4,10 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"prettier.jsxSingleQuote": true,
+		"prettier.singleQuote": true,
+		"prettier.trailingComma": "all",
+		"tslint.jsEnable": true
+	}
 }
