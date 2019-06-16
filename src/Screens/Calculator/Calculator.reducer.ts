@@ -56,10 +56,6 @@ export const calculatorReducer: Reducer<State, Action> = (
       };
 
     default:
-      return {
-        ...state,
-        values,
-        total: calculateTotal(state.operator, values),
-      };
+      throw new Error('Calculator reducer dispatched without a valid action.');
   }
 };
