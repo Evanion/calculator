@@ -1,17 +1,16 @@
 import React from 'react';
+import 'normalize.css';
 import { ThemeProvider } from '@material-ui/styles';
-import { Box } from './Components/Box';
 import { theme } from './Styles/Theme';
 import { Calculator } from './Screens/Calculator/Calculator';
+import { BaseStyles } from './Components/BaseStyles';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
-      <header className="App-header">
+      <BaseStyles>
         <Calculator />
-      </header>
-    </div>
+      </BaseStyles>
     </ThemeProvider>
   );
 };

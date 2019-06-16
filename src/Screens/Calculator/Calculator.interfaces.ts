@@ -15,6 +15,7 @@ export interface State {
 
 export interface AddValueAction {
   type: ACTIONS.ADD_VALUE;
+  payload?:any;
 }
 
 export interface UpdateValueAction {
@@ -39,4 +40,8 @@ export interface SetOperator {
   };
 }
 
-export type Action = AddValueAction | UpdateValueAction | RemoveValueAction | SetOperator;
+export type Action =
+  | AddValueAction
+  | UpdateValueAction
+  | RemoveValueAction
+  | SetOperator;

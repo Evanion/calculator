@@ -11,20 +11,27 @@ interface Props extends StyleProps {
   className?: string;
 }
 
-const useStyles = makeStyles(({textColor, contentBackground}: any) => {
-  console.log(textColor, contentBackground);
-  return{
-  wrapper: ({primary}: StyleProps)=>({
-    padding: 34,
-    border: `1px solid ${textColor}`,
-    backgroundColor: primary ? contentBackground.primary : contentBackground.base,
-  }),
+const useStyles = makeStyles(({ textColor, contentBackground }: any) => {
+  return {
+    wrapper: ({ primary }: StyleProps) => ({
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+      padding: 16,
+      margin: '0 20px',
+      width: 195,
+      height: 195,
+      boxSizing: 'border-box',
+      border: `1px solid ${textColor}`,
+      backgroundColor: primary
+        ? contentBackground.primary
+        : contentBackground.base,
+    }),
+  };
+});
 
-}; });
-
-export const Box = ({primary, className, ...rest}: Props) => {
-  const classes = useStyles({primary});
-  return (
-    <div className={classnames([classes.wrapper, className])} {...rest} />
-  );
+export const Box = ({ primary, className, ...rest }: Props) => {
+  const classes = useStyles({ primary });
+  return <div className={classnames([classes.wrapper, className])} {...rest} />;
 };

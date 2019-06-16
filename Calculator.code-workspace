@@ -8,6 +8,9 @@
 		"prettier.jsxSingleQuote": true,
 		"prettier.singleQuote": true,
 		"prettier.trailingComma": "all",
-		"tslint.jsEnable": true
+		"tslint.jsEnable": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.tslint": true
+	},
 	}
 }

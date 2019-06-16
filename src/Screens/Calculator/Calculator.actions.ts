@@ -17,7 +17,7 @@ export const calculateTotal = (operator: Operator, values: number[]) => {
       return values.reduce((acc, next) => {
         return acc + next;
       }, 0);
-      case Operator.difference:
+    case Operator.difference:
       return values.reduce((acc, next) => {
         if (!acc) {
           return next;
@@ -27,5 +27,4 @@ export const calculateTotal = (operator: Operator, values: number[]) => {
     default:
       throw new Error('"operator" needs to be of a known type');
   }
-
 };
