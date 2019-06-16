@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: any) => ({
     minHeight: '100vh',
     color: theme.textColor,
     fontFamily: theme.textFontFamily,
-    bbackground: theme.appBackground,
+    background: theme.appBackground,
     ...props,
   }),
 }));
