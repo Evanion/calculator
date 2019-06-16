@@ -7,19 +7,19 @@ import { makeStyles } from '@material-ui/styles';
 
 const operators = [
   {
-    label: 'multiply',
+    label: 'Multiplication',
     result: Operator.product,
   },
   {
-    label: 'divide',
+    label: 'Division',
     result: Operator.dividend,
   },
   {
-    label: 'addition',
+    label: 'Addition',
     result: Operator.sum,
   },
   {
-    label: 'subraction',
+    label: 'Subtraction',
     result: Operator.difference,
   },
 ];
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme: any) => ({
     borderRadius: '2px',
     boxSizing: 'border-box',
     padding: 5,
-    marginLeft:10,
+    marginLeft: 10,
     border: `1px solid ${theme.textColor}`,
   },
   button: {},
